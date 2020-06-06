@@ -1,0 +1,98 @@
+*{
+  font-family: calibri;
+}
+  #banner{
+    height:auto;    
+    margin: auto;
+    margin-top: 69px;
+    margin-bottom: 4%;
+    padding:
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1{
+    font-size: 3.1rem;
+  }
+  h2{
+  background-color:rgb(253, 253, 253);
+  font-family:Calibri;
+  margin-top: 3%;
+  margin-bottom: 1px;
+  }
+  .content p{
+    font-size: 20px
+  }
+  .content hr{
+     border: 1px solid gray; 
+     margin-top: 1px;
+     margin-left: 0%;
+     width: 150px;
+  }
+  header{
+    background-color: rgb(211, 211, 211);
+    margin-bottom: 200px;
+  }
+  footer a{
+    color:rgb(218, 218, 218);
+  }
+  .footer-copyright{
+    background-color: rgb(235, 235, 235);
+  }
+  .footer-copyright a{
+    color: #333;
+  }
+  .f1{
+    -webkit-text-fill-color: #ebebebd1;
+  }
+  #button {
+    display: inline-block;
+    background-color: rgb(197, 197, 197);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media screen 
+    and (min-width: 320px) 
+    and (max-width: 568px){
+   h1{
+     font-size: 25px;
+   }
+   h2{
+     font-size: 20px;
+   }
+   .content p{
+    font-size: 14px;
+   }
+   .content hr{
+     width: 85px;
+   }
+  }

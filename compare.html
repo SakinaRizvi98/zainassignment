@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+<title>Compare</title>
+<link rel="icon" href="asset/image/logo/logo3.png" sizes="16x16">
+<link rel="stylesheet" href="asset/bootstrap.css">
+<link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+  <title>Compare</title>
+</head>
+
+<style>
+  #banner{
+    height:auto;    
+    margin: auto;
+    margin-top: 69px;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+  }
+  #navbar a{
+  margin-right: 5px;
+  border-bottom: 2px solid transparent;
+
+}
+#navbar a:hover{
+  border-bottom: 2px solid black;
+  color: black !important;
+  transition: 2s;
+  
+}
+
+</style>
+<body style="background-color:dimgray">
+ <!-----------------------  Navbar Start  ---------------------------->
+ <header class="fixed-top">
+    <nav  class="navbar navbar-dark navbar-expand-md  ">
+    <div class="container">
+    <a href="index.html" class="navbar-bran d"><img src="asset/image/logo/logo3.png" width="90"  alt=""></a>
+    <button class="tgl navbar-toggler bg-dark" data-toggle="collapse" data-target="#navbar">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item "><a href="index.html" class="nav-link text-dark ">Home</a></li>
+          <li class="nav-item"><a href="About.html" class="nav-link text-dark">About Us</a></li>
+          <li class="nav-item"><div class="dropdown">
+            <button class="btn dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item text-dark" ><a class="nav-link text-dark" href="Flash Drives.html">Flash Drives</a></button>
+              <button class="dropdown-item text-dark" ><a class="nav-link text-dark" href="External Hard Drives.html">External Hard Drives</a></button>
+              <button class="dropdown-item text-dark" ><a class="nav-link text-dark" href="OTG Drives.html">OTG Drives</a></button>
+              <button class="dropdown-item text-dark" ><a class="nav-link text-dark" href="Internal Hard Drives.html">Internal Hard Drives</a></button>
+              
+            </div>
+          </div>
+    </li>
+          <li class="nav-item"><div class="dropdown">
+            <button class="btn dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown">
+            Support
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item text-dark" ><a class="nav-link text-dark" href="feedback.html">Feedback</a></button>
+              <button class="dropdown-item text-dark" ><a class="nav-link text-dark" href="complain.html">Complain</a></button>
+              <button class="dropdown-item text-dark" ><a class="nav-link text-dark" href="manuals.html">Manuals</a></button>
+            </div>
+          </div>
+		  </li>
+		  
+          <li class="nav-item"><a href="compare.html" class="nav-link text-dark">Compare</a></li>
+          <li class="nav-item"><a href="contact us.html" class="nav-link text-dark">Contact</a></li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+  </header>
+  <!-----------------------  Navbar End  ---------------------------->
+<div class="container-fluid" id="banner" style=" padding: 0px;">
+<div class="jumbotron bg-light" >
+<img src="asset/image/banner/bannerOverImg.png" class="img-fluid"  alt="">
+</div>
+</div>
+<!---------------------- section Start --------------------------------->
+<div class="container">
+
+
+<div class="container ">
+<div class="mt-3 mx-5 my-2" style="height: auto;width:auto;padding:30px;  background-color:ghostwhite;float: left; border:solid 3px grey;" >
+	<h1>1st Product</h1>
+	Select Brand
+	<select id="brand1" onChange="changeCategories('Categoryid1',this.value)" class="form-control">
+		<option value="" disabled selected>Select Brand</option>
+		<option value="Dell">Orico</option>
+		<option value="Gree">Remax</option>
+		<option value="Huawei">Seagate</option>
+		<option value="Apple">HP</option>
+		<option value="Lg">Samsung</option>
+		<option value="Hp">Toshiba</option>
+		<option value="Sony">Sandisk</option>
+		<option value="Samsung">Kingston</option>
+	</select><br>
+	Select Category
+	<select id="Categoryid1" onChange="changeProdutcs(this.value,'Products1','brand1')" class="form-control">
+		<option value="" disabled selected>Select Category</option>
+	</select><br>
+	Select Product
+	<select id="Products1" onChange="ViewProduct(this.value,'p1')" class="form-control">
+		<option value="" disabled selected>Select Product</option>
+	</select><br>
+	<br>
+<p id="ProductName1"></p>
+<img id="ProductImg1" class="img-fluid" src="asas" alt="" width="300">
+<p><b id="ProductPrice1"></b></p>
+<p id="ProductDescription1"></p>
+
+	
+</div>
+
+
+<div class="mt-3 mx-5 my-2" style="height:auto;padding:30px; width: auto;background-color:ghostwhite;float: left;border:solid 3px grey">
+	<h1>2nd Product</h1>
+	Select Brand
+	<select id="brand2" onChange="changeCategories('Categoryid2',this.value)" class="form-control">
+		<option value="" disabled selected>Select Brand</option>
+		<option value="Dell">Orico</option>
+		<option value="Gree">Remax</option>
+		<option value="Huawei">Seagate</option>
+		<option value="Apple">HP</option>
+		<option value="Lg">Samsung</option>
+		<option value="Hp">Toshiba</option>
+		<option value="Sony">Sandisk</option>
+		<option value="Samsung">Kingston</option>
+	</select><br>
+	Select Category
+	<select id="Categoryid2" onChange="changeProdutcs(this.value,'Products2','brand2')" class="form-control">
+		<option value="" disabled selected>Select Category</option>
+	</select><br>
+	Select Product
+	<select id="Products2" onChange="ViewProduct(this.value,'p2')" class="form-control">
+		<option value="" disabled selected>Select Product</option>
+	</select><br>
+	<br>
+<p id="ProductName2"></p>
+<img id="ProductImg2" class="img-fluid" src="asas" alt="" width="300">
+<p><b id="ProductPrice2"></b></p>
+<p id="ProductDescription2"></p>
+
+	
+</div>
+
+</div>
+</body>
+
+
+<!---------------------- section end --------------------------------->
+
+
+
+	  <script>
+	
+	var products=[
+	
+	    //Laptops
+	
+		{Brand:"Orico",Category:"SSD",Name:"SSD Inspiron 5370",Price:"Rs. 42,990",Dec:"Color: Platinum Silver <br> Card Reader (Y/N): Yes <br> Operating System: Windows 10 <br> Storage (Capacity): 128GB SSD <br> Graphics (Capacity): Integrated <br>",ImgUrl:"Images/lap6.jpg"},
+		{Brand:"Orico",Category:"SSD",Name:"SDD Vostro 5471",Price:"Rs.75,994",Dec:"Card Reader (Y/N): Yes <br> Memory (RAM): 4GB <br> Processor Type: Intel Core i5 <br> Storage (Capacity): 1TB HDD <br> Network Card: Yes <br>",ImgUrl:"Images/lap8.jpg"},
+		{Brand:"Orico",Category:"SSD",Name:"SSD XPS 13 -9370",Price:"Rs. 150,000",Dec:"Card Reader (Y/N): Yes <br> Memory (RAM): 16GB <br> Built-in Webcam: Yes <br> Operating System: Windows 10 <br> Processor Type: Intel Core i7-8550U <br>",ImgUrl:"Images/dell4.jpg"},
+		{Brand:"Orico",Category:"SSD",Name:"SSD Inspiron 5370",Price:"Rs. 42,990",Dec:"Memory (RAM): 4GB <br> Operating System: Windows 10 <br> Storage (Capacity): 128GB SSD <br> Optical Drive: No <br> Color: Platinum Silver <br>",ImgUrl:"Images/dell5.jpg"},
+		{Brand:"Orico",Category:"SSD",Name:"SSD Inspiron 5482",Price:"Rs. 160,000",Dec:"Built-in Webcam: Yes <br>Platform: Convertible<br>Operating<br>System: Windows 10 <br>Memory (RAM): 8GB<br>Card Reader (Y/N): Yes",ImgUrl:"Images/delllap5.jpg"},
+		{Brand:"Orico",Category:"SSD",Name:"SSD Inspiron 5482",Price:"Rs. 110,000",Dec:"Card Reader (Y/N): Yes <br>Memory (RAM): 4GB<br>Built-in Webcam: Yes<br>Operating System: Windows 10<br>Storage (Capacity): 1TB",ImgUrl:"Images/delllap6.jpg"},
+		
+		///////////////////////////////////
+		{Brand:"Seagate",Category:"SSD",Name:"SSD Matebook D Marconi",Price:"Rs.60,000",Dec:"Built-in Webcam: Yes <br> Connectivity: WiFi, Bluetooth <br> Graphic Card(S/D): Shared <br> Touchscreen: No <br> Graphics Card: Intel UHD Graphics 620 <br>",ImgUrl:"Images/lap9.jpg"},
+		{Brand:"Seagate",Category:"SSD",Name:"SSD Matebook D Kepler",Price:"Rs.65,000",Dec:"Memory (RAM): 8GB <br> Operating System: Windows 10 <br> Processor Type: AMD Ryzen R5 <br> Network Card: Yes <br> Made in: China <br>",ImgUrl:"Images/lap10.jpg"},
+		{Brand:"Seagate",Category:"SSD",Name:"SSD Matebook X Pro Mach",Price:"Rs.250,000",Dec:"Color: Silver <br> Optical Drive: No <br> Operating System: Windows 10 <br> Processor Type: Intel Core i5 <br> Graphic Card(S/D): Dedicated <br>",ImgUrl:"Images/lap2.jpg"},
+		{Brand:"Seagate",Category:"SSD",Name:"SSD Matebook D",Price:"Rs.65,000",Dec:"Card Reader (Y/N): No <br> Network Card: Yes <br> Optical Drive: No <br> Connectivity: WiFi, Bluetooth <br> Graphic Card(S/D): Dedicated <br>",ImgUrl:"Images/huawei4.jpg"},
+		{Brand:"Seagate",Category:"SSD",Name:"SSD Matebook 13 WRIGHT",Price:"Rs.150,000",Dec:"Card Reader (Y/N): No <br>Memory (RAM): 8GB<br>Built-in Webcam: Yes <br>Operating System: Windows 10<br>Processor Type: Intel Core i7",ImgUrl:"Images/huaweilap5.jpg"},
+		{Brand:"Seagate",Category:"SSD",Name:"SSD Matebook D",Price:"Rs.120,000",Dec:"Card Reader (Y/N): No <br>Memory (RAM): 8GB<br>Built-in Webcam: Yes <br>Operating System: Windows 10<br>Processor Type: Intel Core i7",ImgUrl:"Images/huaweilap6.jpg"},
+		
+		//////////////////////////////////
+		{Brand:"Toshiba",Category:"SSD",Name:"SSD Notebook 15-db0000nx",Price:"Rs.50,000",Dec:"Storage (Capacity): 1TB HDD <br> Touchscreen: No <br> Made in: China <br> Operating System: Windows 10 <br> Card Reader (Y/N): Yes <br>",ImgUrl:"Images/lap3.jpg"},
+		{Brand:"Toshiba",Category:"SSD",Name:"SSD Notebook 14, Intel Celeron",Price:"Rs.40,000",Dec:"Storage (Capacity): 500GB HDD <br> Battery Type: Lithium <br> Optical Drive: No <br> Color: Smoky Gray <br> Screen Size (inch): 14 <br>",ImgUrl:"Images/lap4.jpg"},
+		{Brand:"Toshiba",Category:"SSD",Name:"SSD Notebook 14-cf0004nx",Price:"Rs.85,000",Dec:"Graphics (Capacity): 2GB <br> Card Reader (Y/N): Yes <br> Platform: Clamshell <br> Screen Size (inch): 14 <br> Storage (Capacity): 1TB + Intel Optane Memory 16GB <br>",ImgUrl:"Images/lap5.jpg"},
+		{Brand:"Toshiba",Category:"SSD",Name:"SSD Stream 14-cb003nx,",Price:"Rs.50,000",Dec:"Network Card: No <br> Graphics Card: Intel HD Graphics 400 <br> Built-in Webcam: Yes <br> Series Name: Stream 14 <br> Touchscreen: No <br>",ImgUrl:"Images/hp4.jpg"},
+		{Brand:"Toshiba",Category:"SSD",Name:"SSD Notebook 14",Price:"Rs.140,000",Dec:"Color: Pale Gold <br>Touchscreen: No<br>Made in: China <br>Card Reader (Y/N): Yes<br>Connectivity: WiFi, Bluetooth",ImgUrl:"Images/hplap5.jpg"},
+		{Brand:"Toshiba",Category:"SSD",Name:"SSD Notebook 15-da1019nx",Price:"Rs.120,000",Dec:"Processor Type: Intel Core i7 <br>Graphics Card: NVIDIA GeForce MX130<br>Graphics (Capacity): 4GB <br>Screen Size (inch): 15.6<br>Memory (RAM): 8GB",ImgUrl:"Images/hplap6.jpg"},
+	
+	
+		//Ac
+	
+		
+		/////////////////////////////////
+		{Brand:"Remax",Category:"USB",Name:"USB 8 GB",Price:"Rs.50,000",Dec:"Voltage: 220V <br> Warranty(compressor): 5 Years <br> Filter (type): Normal <br> Coverage Area: 12 m² <br> Remote Control: Yes <br>",ImgUrl:"Images/ac9.jpg"},
+		{Brand:"Remax",Category:"USB",Name:"USB 16 GB",Price:"Rs.70,000",Dec:"Cooling Capacity: 18000 BTU <br> Air Swing: Yes <br> Compressor Type: Rotary <br> Cold or H/C: Cold <br> Made in: China <br>",ImgUrl:"Images/ac10.jpg"},
+		{Brand:"Remax",Category:"USB",Name:"USB  17,800 BTU",Price:"Rs.77,000",Dec:"Filter (type): Normal <br> Made in: China <br> Voltage: 220V <br> Cold or H/C: Hot & Cold <br> Air Swing: Yes <br>",ImgUrl:"Images/ac11.jpg"},
+		{Brand:"Remax",Category:"USB",Name:"USB  22,000 BTU",Price:"Rs.1,05,000",Dec:"Cold or H/C: Cold <br> Made in: China <br> Air Swing: Yes <br> Color: White <br> Voltage: 220V <br>",ImgUrl:"Images/ac12.jpg"},
+		{Brand:"Remax",Category:"USB",Name:"USB 32 GB, Cold, WiFi Function",Price:"Rs.230,000",Dec:"Warranty(compressor): 5 Years <br>Color: White<br>Remote Control: Yes <br>Cooling Capacity: 27,200 BTU<br>Filter (type): Normal",ImgUrl:"Images/greeac5.jpg"},
+		{Brand:"Remax",Category:"USB",Name:"USB 64 GB",Price:"Rs.150,000",Dec:"Cold or H/C: Hot & Cold <br>Made in: China<br>Color: White <br>Voltage: 220V<br>Remote Control: Yes",ImgUrl:"Images/greeac6.jpg"},
+		///////////////////////////////////
+		
+		{Brand:"Kingston",Category:"USB",Name:"Kingston USB 8 GB",Price:"Rs.57,000",Dec:"Cold or H/C: Hot & Cold <br> Made in: China <br> Air Swing: Yes <br> Warranty(compressor): 5 Years <br> Color: White <br>",ImgUrl:"Images/ac1.jpg"},
+		{Brand:"Kingston",Category:"USB",Name:"Kingston USB 2 GB",Price:"Rs.67,000",Dec:"Cold or H/C: Hot & Cold <br> Made in: Thailand <br> Warranty(compressor): 5 Years <br> Color: White <br> Voltage: 220V <br>",ImgUrl:"Images/ac2.jpg"},
+		{Brand:"Kingston",Category:"USB",Name:"Kingston USB 4 GB",Price:"Rs.60,000",Dec:"Cold or H/C: Cold <br> Made in: Thailand <br> Warranty(compressor): 5 Years <br> Color: White <br> Voltage: 220V <br>",ImgUrl:"Images/ac3.jpg"},
+		{Brand:"Kingston",Category:"USB",Name:"Kingston USB 32 GB ",Price:"Rs.80,000",Dec:"Cold or H/C: Hot & Cold <br> Made in: China <br> Air Swing: Yes <br> Warranty(compressor): 5 Years <br> Color: White <br>",ImgUrl:"Images/ac4.jpg"},
+		{Brand:"Kingston",Category:"USB",Name:"Kingston USB 16 GB, 17,500 ",Price:"Rs.95,000",Dec:"Filter (type): Triple Coating Filter <br>Cooling Capacity: 17,500 BTU,<br>Cold or H/C: Cold <br>Made in: Thailand<br>Air Swing: 4 Ways",ImgUrl:"Images/samsungac5.jpg"},
+		{Brand:"Kingston",Category:"USB",Name:"Kingston USB 64 GB,500 BTU ",Price:"Rs.150,000",Dec:"Warranty(compressor): 5 Years <br>Cold or H/C: Cold<br>Made in: Thailand <br>Air Swing: 2 Ways<br>Color: White",ImgUrl:"Images/samsungac6.jpg"},
+		
+		///////////////////////////////////
+		{Brand:"Samsung",Category:"USB",Name:"Samsung USB 64 GB",Price:"Rs.85,000",Dec:"Color: White <br> Remote Control: Yes <br> Warranty(compressor): 10 Years <br> Made in: Saudi Arabia <br> Compressor Type: Rotary <br>",ImgUrl:"Images/ac5.jpg"},
+		{Brand:"Samsung",Category:"USB",Name:"Samsung USB 4 GB, Fresh big",Price:"Rs.55,000",Dec:"Cold or H/C: Hot & Cold <br> Color: White <br> Voltage: 220V <br> Filter (type): Normal <br> Cooling Capacity: 17,060 BTU <br>",ImgUrl:"Images/ac6.jpg"},
+		{Brand:"Samsung",Category:"USB",Name:"Samsung USB 32 GB",Price:"Rs.60,000",Dec:"Compressor Type: Inverter Rotary <br> Warranty(compressor): 10 Years <br> Made in: Saudi Arabia <br> Air Swing: 4 Ways <br> Warranty: 2 Years <br>",ImgUrl:"Images/ac7.jpg"},
+		{Brand:"Samsung",Category:"USB",Name:"Samsung USB 16 GB ",Price:"Rs.80,000",Dec:"Warranty(compressor): 10 Years <br> Color: White <br> Voltage: 220-230V 50/60Hz <br> Remote Control: Yes <br> Compressor Type: Inverter Rotary <br>",ImgUrl:"Images/ac8.jpg"},
+		{Brand:"Samsung",Category:"USB",Name:"Samsung USB 8 GB",Price:"Rs.255,000",Dec:"Compressor Type: Inverter Rotary <br>Cooling Capacity: 21,500 BTU<br>Cold or H/C: Cold <br>Made in: Saudi Arabia<br>Air Swing: 4 Ways",ImgUrl:"Images/lgac5.jpg"},
+		{Brand:"Samsung",Category:"USB",Name:"Samsung USB 2 GB, 30,000 BTU ",Price:"Rs.550,000",Dec:"Cold or H/C: Cold <br>Made in: Korea<br>Air Swing: 4 Ways <br>Warranty(compressor): 10 Years<br>Color: White",ImgUrl:"Images/lgac6.jpg"},
+	
+		
+		
+		
+		//Tv
+	
+	
+		//////////////////////////////////
+		{Brand:"Samsung",Category:"HHD",Name:"Samsung HDD, 4K, Nano Cell",Price:"Rs.160,000",Dec:"USB Port(s): 3 <br> HD type: 4K HDR <br> Color: Black <br> Voltage: 100-220V, 50/60HZ <br> Wifi: Built-in Wifi <br>",ImgUrl:"Images/lgledimg1.jpg"},
+		{Brand:"Samsung",Category:"HHD",Name:"Samsung HDD OLED-4K, Smart",Price:"Rs.110,000",Dec:"Color: Black <br> HDMI Inputs: 4 <br> 3D (Y/N): No <br> Panel Type: LED <br> Resolution (MP): 3840 X 2160 <br>",ImgUrl:"Images/lgledimg2.jpg"},
+		{Brand:"Samsung",Category:"HHD",Name:"Samsung HDD, Smart, OLED 4K",Price:"Rs.80,000",Dec:"Wifi: Built-in Wifi <br> Color: Not known <br> Screen Size: 55 <br> Voltage: 100-220V, 50/60HZ <br> HD type: 4K UHD <br>",ImgUrl:"Images/lgledimg3.jpg"},
+		{Brand:"Samsung",Category:"HHD",Name:"Samsung HDD, Smart, OLED 4K",Price:"Rs.250,000",Dec:"USB Port(s): 3 <br> Motion Flow: 100 <br> HD type: 4K UHD <br> 3D (Y/N): No <br> Screen Size: 65 <br>",ImgUrl:"Images/lgledimg4.jpg"},
+		{Brand:"Samsung",Category:"HHD",Name:"Samsung HDD Smart TV",Price:"Rs.350,000",Dec:"3D (Y/N): No <br>Wifi: Built-in Wifi<br>Panel Type: LED <br>Resolution (MP): 3840 X 2160<br>Color: Black",ImgUrl:"Images/lgtv5.jpg"},
+		{Brand:"Samsung",Category:"HHD",Name:"Samsung HDD, Smart, 4K TV",Price:"Rs.110,000",Dec:"Wifi: Yes <br>Panel Type: LED>br>Resolution (MP): 3840 X 2160 <br>HD type: 4K UHD<br>Made in: Egypt",ImgUrl:"Images/lgtv6.jpg"},
+		
+		//////////////////////////////////
+		{Brand:"Kingston",Category:"HHD",Name:"Kingston HDD, Smart",Price:"Rs.150,000",Dec:"Color: Black <br> Wifi: Yes <br> 3D (Y/N): No <br> Voltage: 100-240V 50-60 Hz <br> Screen Size: 55 <br>",ImgUrl:"Images/Samsungtv1.jpg"},
+		{Brand:"Kingston",Category:"HHD",Name:"Kingston HDD, Smart",Price:" Rs.350,000",Dec:"3D (Y/N): No <br> Wifi: Yes <br> Panel Type: LED <br> Color: Crystal <br> HD type: 4K UHD <br>",ImgUrl:"Images/Samsungtv2.jpg"},
+		{Brand:"Kingston",Category:"HHD",Name:"Kingston HDD, Smart, 4K ",Price:"Rs.252,000",Dec:"Wifi: Yes <br> HD type: 4K UHD <br> Made in: Egypt <br>	HDMI Inputs: 3 <br> Screen Size: 75 <br>",ImgUrl:"Images/Samsungtv3.jpg"},
+		{Brand:"Kingston",Category:"HHD",Name:"Kingston HDD, Curved, Smart, 4K ",Price:"Rs.180,000",Dec:"USB Port(s): 2 <br> HDMI Inputs: 3 <br> Wifi: Yes <br> HD type: 4K UHD <br> Resolution (MP): 3840 X 2160 <br>",ImgUrl:"Images/Samsungtv4.jpg"},
+		{Brand:"Kingston",Category:"HHD",Name:"Kingston HDD, Curved, LED 4K",Price:"Rs.150,000",Dec:"3D (Y/N): No <br>Resolution (MP): 3840 X 2160<br>HD type: 4K UHD <br>Made in: Egypt<br>Voltage: 100-240V 50-60 Hz",ImgUrl:"Images/samsungtv5.jpg"},
+		{Brand:"Kingston",Category:"HHD",Name:"Kingston HDD, Series 8 ",Price:"Rs.360,000",Dec:"Resolution (MP): 3840 X 2160 <br>Contrast Ratio: Mega Contrast<br>Voltage: 100-240V 50-60 Hz <br>USB Port(s): 2<br>Panel Type: LED",ImgUrl:"Images/samsungtv6.jpg"},
+		
+		//////////////////////////////////
+		
+		{Brand:"Sandisk",Category:"HHD",Name:"Sandisk HDD, Android, 4K,",Price:"Rs.680,000",Dec:"Color: Black <br> USB Port(s): 2 <br> Made in: Malaysia <br> Wifi: Yes <br> HD type: 4K HDR <br>",ImgUrl:"Images/sonyledimg1.jpg"},
+		{Brand:"Sandisk",Category:"HHD",Name:"Sandisk HDD, Smart, 4K TV",Price:"Rs.40,000",Dec:"Panel Type: LED <br> 3D (Y/N): No <br> Voltage: 110-220V <br> Resolution (MP): 3840 X 2160 <br> Color: Black <br>",ImgUrl:"Images/sonyledimg2.jpg"},
+		{Brand:"Sandisk",Category:"HHD",Name:"Sandisk HDD, Android, 4K  ",Price:"Rs.60,000",Dec:"Color: Black <br> Screen Size: 49 <br> Made in: Malaysia <br> Motion Flow: XR 200 Hz <br> Resolution (MP): 3840 X 2160 <br>",ImgUrl:"Images/sonyledimg3.jpg"},
+		{Brand:"Sandisk",Category:"HHD",Name:"Sandisk HDD, Smart, 2K,  ",Price:"Rs.60,000",Dec:"Color: Black <br> Made in: Malaysia <br> Motion Flow: XR 200 Hz <br> 3D (Y/N): No <br> Resolution (MP): 1920 x 1080 <br>",ImgUrl:"Images/sonyledimg4.jpg"},
+		{Brand:"Sandisk",Category:"HHD",Name:"Sandisk HDD, Android, 4K ",Price:"Rs.240,000",Dec:"3D (Y/N): No <br>Panel Type: LED<br>Resolution (MP): 3840 X 2160 <br>Color: Black<br>HD type: 4K HDR",ImgUrl:"Images/sonyltv5.jpg"},
+		{Brand:"Sandisk",Category:"HHD",Name:"Sandisk HDD 4K HDR  ",Price:"Rs.260,000",Dec:"3D (Y/N): No <br>Wifi: Yes<br>Panel Type: LED <br>Resolution (MP): 3840 X 2160<br>Color: Black",ImgUrl:"Images/sonytv6.jpg"},
+		
+		//////////////////////////////////
+		
+		
+		//Mobiles
+		
+		
+		//////////////////////////////////
+		
+		{Brand:"Kingston",Category:"Hard Drive",Name:"Kingston Hard Drive",Price:"Rs.72,000",Dec:"Memory (internal): 128GB <br> Color: Gray <br> Dual SIM Card: Yes <br> Memory Card Slot: MicroSD <br> Network: 4G <br>",ImgUrl:"Images/samsung mobile img1.jpg"},
+		{Brand:"Kingston",Category:"Hard Drive",Name:"Kingston Hard Drive 9",Price:"Rs.90,000",Dec:"Touchscreen: Yes <br> Memory (internal): 128GB <br Color: Ocean Blue <br> Dual SIM Card: Yes <br> Memory Card Slot: MicroSD <br> Network: 4G <br>",ImgUrl:"Images/samsung mobile img2.jpg"},
+		{Brand:"Kingston",Category:"Hard Drive",Name:"Kingston Hard Drive Plus ",Price:"Rs.110,000",Dec:"Touchscreen: Yes <br> Memory (internal): 512GB <br> Color: Ceramic Black <br> Dual SIM Card: Hybrid<br> Memory Card Slot: Yes <br>",ImgUrl:"Images/samsung mobile img3.jpg"},
+		{Brand:"Kingston",Category:"Hard Drive",Name:"Kingston Hard Drive A9 ",Price:"Rs.65,000",Dec:"Touchscreen: Yes <br> Memory (internal): 128GB <br> Color: Black <br> Network: 4G <br> Processor (CPU): Octa Core <br>",ImgUrl:"Images/samsung mobile img4.jpg"},
+		{Brand:"Kingston",Category:"Hard Drive",Name:"Kingston Hard Drive A70 ",Price:"Rs.60,000",Dec:"Dual SIM Card: Dual Nano SIM<br>Memory Card Slot: MicroSD<br>Network: 4G<br>Operating System: Android 9.0 Pie<br>Made in: Assorted",ImgUrl:"Images/samsungmobile5.jpg"},
+		{Brand:"Kingston",Category:"Hard Drive",Name:"Kingston Hard Drive A50 ",Price:"Rs.40,000",Dec:"Touchscreen: Yes <br>Color: Blue<br>Dual SIM Card: Yes <br>Screen Size (inch): 6.4<br>Memory (internal): 128GB",ImgUrl:"Images/samsungmobile6.jpg"},
+		
+		//////////////////////////////////
+		{Brand:"HP",Category:"Hard Drive",Name:"HP Hard Drive XS Max",Price:"Rs.150,000",Dec:"Front Cam resolution: 7 <br> Face ID: Yes <br> Processor (CPU): A12 Bionic <br> USB: Lightning <br> Finger Print (Y/N): No <br>",ImgUrl:"Images/iphoneimg1.jpg"},
+		{Brand:"HP",Category:"Hard Drive",Name:"HP Hard Drive X",Price:"Rs.110,000",Dec:"Memory (internal): 256GB <br> Color: Silver <br> Dual SIM Card: No <br> Memory Card Slot: No <br> Network: 4G <br>",ImgUrl:"Images/iphoneimg2.jpg"},
+		{Brand:"HP",Category:"Hard Drive",Name:"HP Hard Drive XR",Price:"Rs.120,000",Dec:"Face ID: Yes <br> Touchscreen: Yes <br> Operating System: IOS 12 <br> Color: Yellow <br> Front Cam resolution: 7 <br>",ImgUrl:"Images/iphoneimg3.jpg"},
+		{Brand:"HP",Category:"Hard Drive",Name:"HP Hard Drive 7 Plus",Price:"Rs.90,000",Dec:"Memory (internal): 32GB <br> Dual SIM Card: No <br> RAM: 2GB <br> Water Resistant(Y/N): Yes <br> Finger Print (Y/N): Yes <br>",ImgUrl:"Images/iphoneimg4.jpg"},
+		{Brand:"HP",Category:"Hard Drive",Name:"HP Hard Drive 7",Price:"Rs.90,000",Dec:"Touchscreen: Yes <br>Memory (internal): 32GB<br>Color: Rose Gold<br>Dual SIM Card: No<br>Memory Card Slot: No",ImgUrl:"Images/iphonemob5.jpg"},
+		{Brand:"HP",Category:"Hard Drive",Name:"HP Hard Drive 6s Plus",Price:"Rs.90,000",Dec:"Touchscreen: Yes <br>Color: Space Grey<br>Dual SIM Card: No<br>Memory Card Slot: No<br>Operating System: iOS 10",ImgUrl:"Images/iphone6.jpg"},
+		
+		//////////////////////////////////
+		{Brand:"Seagate",Category:"Hard Drive",Name:"Seagate Hard Drive 20 Pro",Price:"Rs.90,000",Dec:"Touchscreen: Yes <br> Memory (internal): 128GB <br> Color: Black <br> Memory Card Slot: MicroSD <br> Network: 4G <br>",ImgUrl:"Images/huaweimobileimg1.jpg"},
+		{Brand:"Seagate",Category:"Hard Drive",Name:"Seagate Hard Drive 3i",Price:"Rs.50,000",Dec:"Memory Card Slot: MicroSD <br> Made in: China <br> Finger Print (Y/N): Yes <br> Touchscreen: Yes <br> Network: 4G <br>",ImgUrl:"Images/huaweimobileimg2.jpg"},
+		{Brand:"Seagate",Category:"Hard Drive",Name:"Seagate Hard Drive Pro",Price:"Rs.110,000",Dec:"Touchscreen: Yes <br> Front Cam resolution: 32 MP <br> Water Resistant(Y/N): Yes <br> Made in: China <br> Finger Print (Y/N): Yes <br>",ImgUrl:"Images/huaweimobileimg3.jpg"},
+		{Brand:"Seagate",Category:"Hard Drive",Name:"Seagate Hard Drive 2019",Price:"Rs.45,000",Dec:"Touchscreen: Yes <br> Memory (internal): 64GB <br> Color: Blue <br> Memory Card Slot: MicroSD <br> Network: 4G <br>",ImgUrl:"Images/huaweimobileimg4.jpg"},
+		{Brand:"Seagate",Category:"Hard Drive",Name:"Seagate Hard Drive 4",Price:"Rs.50,000",Dec:"Touchscreen: Yes <br>Dual SIM Card: Yes<br>Processor (CPU): Octa Core <br>Operating System: Android 9<br>RAM: 8GB",ImgUrl:"Images/huaweimob5.jpg"},
+		{Brand:"Seagate",Category:"Hard Drive",Name:"Seagate Hard Drive P30",Price:"Rs.80,000",Dec:"Memory Card Slot: NANO SD <br>Processor (CPU): Octa Core<br>USB: TYPE-C<br>Operating System: Android 9<br>Water Resistant(Y/N): Yes",ImgUrl:"Images/huaweimob6.jpg"},
+		
+		//////////////////////////////////
+		
+	];
+	
+		
+		
+		
+		
+	 function  changeCategories(catId,brand)
+		{
+		//	alert(brand);
+			var Cat=document.getElementById(catId);
+			
+			Cat.innerHTML="<option value='' disabled selected>Select Category</option>";
+			var str="";
+			for(var i=0; i<products.length; i++)
+			{
+				
+				if(products[i].Brand == brand && !(str.includes(products[i].Category)))
+				{
+					Cat.innerHTML+="<option >"+products[i].Category	+"</option>";
+					str+=products[i].Category;
+				}
+				
+				
+			}
+			
+			
+			
+		}
+	function changeProdutcs(cat, pId,brandId)
+		{
+			var brand=document.getElementById(brandId).value;
+		
+			var product=document.getElementById(pId);
+			product.innerHTML="<option value='' disabled selected>Select Product</option>";
+		
+			for(var i=0; i<products.length; i++)
+			{
+				if(products[i].Brand == brand && products[i].Category==cat)
+				{
+				
+					product.innerHTML+="<option value='"+i+"'>"+products[i].Name+"</option>";	
+				}
+				
+				
+			}
+		}
+	
+	function ViewProduct(index,p)
+		{
+			switch(p)
+				{
+					case "p1":
+						document.getElementById('ProductName1').innerHTML=products[index].Name;
+						document.getElementById('ProductImg1').src=products[index].ImgUrl;
+						document.getElementById('ProductPrice1').innerHTML=products[index].Price;
+						document.getElementById('ProductDescription1').innerHTML=products[index].Dec;
+						
+						break;
+					case "p2":
+						document.getElementById('ProductName2').innerHTML=products[index].Name;
+						document.getElementById('ProductImg2').src=products[index].ImgUrl;
+						document.getElementById('ProductPrice2').innerHTML=products[index].Price;
+						document.getElementById('ProductDescription2').innerHTML=products[index].Dec;
+						
+						break;
+						
+						
+				}
+			
+			
+		}
+		
+		
+	</script>
+	
+
+
+
+
+
+<script src="asset/jquery-3.4.1.js" type="text/javascript"></script>
+<script src="asset/bootstrap.js" type="text/javascript"></script>
+<script src="asset/jquery.js" type="text/javascript"></script>
+
+</html>
+
+
+
+
+
+
